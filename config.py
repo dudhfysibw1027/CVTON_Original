@@ -63,7 +63,7 @@ def add_all_arguments(parser, train):
     parser.add_argument('--z_dim', type=int, default=9, help="dimension of the latent z vector")
 
     parser.add_argument('--val_size', type=float, default=0.05, help="Validation set size (fraction - not int).")
-    parser.add_argument('--train_size', type=float, default=0.95, help="Train set size (fraction - not int).")
+    parser.add_argument('--train_size', type=float, default=0.05, help="Train set size (fraction - not int).")
     parser.add_argument('--transform_cloth', action='store_true',
                         help="Whether to feed a transformed cloth to the OASIS architecture.")
     parser.add_argument('--bpgm_id', type=str, default="256_3_5",
