@@ -10,7 +10,7 @@ from utils.fid_scores import fid_pytorch
 import config
 
 from torch.cuda.amp import GradScaler
-
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 #--- read options ---#
 opt = config.read_arguments(train=True)
 
