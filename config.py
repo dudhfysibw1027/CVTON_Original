@@ -85,7 +85,7 @@ def add_all_arguments(parser, train):
         parser.add_argument('--freq_save_latest', type=int, default=1000, help='frequency of saving the latest model')
         parser.add_argument('--freq_smooth_loss', type=int, default=250, help='smoothing window for loss visualization')
         parser.add_argument('--freq_save_loss', type=int, default=2000, help='frequency of loss plot updates')
-        parser.add_argument('--freq_fid', type=int, default=5000,
+        parser.add_argument('--freq_fid', type=int, default=6500,
                             help='frequency of saving the fid score (in training iterations)')
         parser.add_argument('--continue_train', action='store_true', help='resume previously interrupted training')
         parser.add_argument('--num_epochs', type=int, default=200, help='number of epochs to train')
