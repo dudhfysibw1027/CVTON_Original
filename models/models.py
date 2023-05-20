@@ -293,9 +293,9 @@ class OASIS_model(nn.Module):
             elif mode == "generate":
                 with torch.no_grad():
                     if self.opt.no_EMA:
-                        fake = self.netG(image["I_m"], image["C_t"], label["body_seg"], label["cloth_seg"], label["densepose_seg"], agnostic=agnostic)
+                        fake = self.netG(image["I_m"], image["target_cloth"], label["body_seg"], label["cloth_seg"], label["densepose_seg"], agnostic=agnostic)
                     else:
-                        fake = self.netEMA(image["I_m"], image["C_t"], label["body_seg"], label["cloth_seg"], label["densepose_seg"], agnostic=agnostic)
+                        fake = self.netEMA(image["I_m"], image["target_cloth"], label["body_seg"], label["cloth_seg"], label["densepose_seg"], agnostic=agnostic)
                 return fake
             
             else:
